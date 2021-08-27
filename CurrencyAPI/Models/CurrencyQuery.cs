@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace CurrencyAPI.Models
 {
-    public class CurrencyQuerry
+    public class CurrencyQuery
     {
         public Dictionary<string,string> currencyCodes { get; set; }
         public DateTime startDate { get; set; }
