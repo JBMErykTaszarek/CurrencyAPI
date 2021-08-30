@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace CurrencyAPI
 {
-    public class ResponseParser
+    public static class ResponseParser
     {
-        public List<SingleCurrencyDTO> ParseCSVToObjectList (string csv)
+        public static List<SingleCurrencyDTO> ParseCSVToObjectList (string csv)
         {
             try
             {

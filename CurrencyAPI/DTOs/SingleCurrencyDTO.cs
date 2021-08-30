@@ -7,7 +7,9 @@ namespace CurrencyAPI.DTOs
 {
     public class SingleCurrencyDTO
     {
-        public string rate { get; set; }
+        public int Id { get; set; }
         public DateTime date { get; set; }
+        public string rate { get; set; }
+        
     }
 }

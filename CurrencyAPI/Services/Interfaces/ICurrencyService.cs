@@ -9,6 +9,6 @@ namespace CurrencyAPI.Services.Interfaces
 {
     interface ICurrencyService
     {
-        public Task<List<SingleCurrencyDTO>> GetCurrency (CurrencyQuery currencyQuery);
+        public Task<List<SingleCurrencyDTO>> GetCurrency ();
     }
 }
