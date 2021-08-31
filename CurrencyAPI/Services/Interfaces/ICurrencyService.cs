@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace CurrencyAPI.Services.Interfaces
 {
-    interface ICurrencyService
+    public interface ICurrencyService
     {
-        public Task<List<SingleCurrencyDTO>> GetCurrency ();
+        public Task<List<SingleCurrencyDTO>> GetCurrency (CurrencyQuery query);
     }
 }

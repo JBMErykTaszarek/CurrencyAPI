@@ -7,6 +7,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using CurrencyAPI.DTOs;
 using CurrencyAPI.DataBase;
+using CurrencyAPI.Services.Interfaces;
+using CurrencyAPI.Services;
+using CurrencyAPI.Models;
 
 namespace CurrencyAPI.Controllers
 {
@@ -15,18 +18,22 @@ namespace CurrencyAPI.Controllers
     public class CurrencyController : ControllerBase
     {
         private readonly AppDbContext _context;
+        private readonly ICurrencyService _currencyService;
 
-        public CurrencyController(AppDbContext context)
+        public CurrencyController(AppDbContext context, ICurrencyService currencyService)
         {
             _context = context;
+            _currencyService = currencyService;
         }
 
         // GET: api/Currency
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<SingleCurrencyDTO>>> GetCurrencyRates()
+        [HttpPost]
+        [Route("/GetCurrencyRates")]
+        public async Task<ActionResult<IEnumerable<SingleCurrencyDTO>>> GetCurrencyRates([FromBody]CurrencyQuery query)
         {
-            return await _context.CurrencyRates.ToListAsync();
+            return await _currencyService.GetCurrency(query);
         }
+
 
         // GET: api/Currency/5
         [HttpGet("{id}")]

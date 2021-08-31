@@ -37,21 +37,22 @@ namespace CurrencyAPI
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(ConnectionString));
 
             services.AddSwaggerGen();
-            services.AddScoped<ICurrencyService, CurrencyService>();
+            services.AddSingleton<ICurrencyService, CurrencyService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            app.UseSwagger();
-            app.UseSwaggerUI(c =>
-            {
-                c.SwaggerEndpoint("v1/swagger.json", "swagger");
-            });
+            
 
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseSwagger();
+                app.UseSwaggerUI(c =>
+                {
+                    c.SwaggerEndpoint("v1/swagger.json", "swagger");
+                });
             }
 
             app.UseHttpsRedirection();

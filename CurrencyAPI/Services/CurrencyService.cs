@@ -8,6 +8,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using CurrencyAPI;
+using System.Globalization;
 
 namespace CurrencyAPI.Services
 {
@@ -20,7 +21,7 @@ namespace CurrencyAPI.Services
 
         }
 
-        public async Task<List<SingleCurrencyDTO>> GetCurrency()
+        public async Task<List<SingleCurrencyDTO>> GetCurrency(CurrencyQuery query)
         {
             HttpClient _client = new HttpClient();
             _client = new HttpClient
@@ -30,13 +31,14 @@ namespace CurrencyAPI.Services
             };
 
             _client.DefaultRequestHeaders.Accept.Clear();
-            _client.DefaultRequestHeaders.Accept.Add(
-                                 new MediaTypeWithQualityHeaderValue("text/csv"));
-            var kk= await _client.GetAsync("D.PLN.EUR.SP00.A?startPeriod=2009-05-12&endPeriod=2009-05-12&detail=dataonly&dimensionAtObservation=AllDimensions");
-            var d = kk.ToString();
-            ResponseParser.ParseCSVToObjectList(d);
+            var d = query.startDate.ToString("yyyy-mm-dd");
+            _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("text/csv"));
+            var urlString = ($"D.{query.currencyCodes.FirstOrDefault().Key}.{query.currencyCodes.FirstOrDefault().Value}.SP00.A?startPeriod={query.startDate.ToString("yyyy-MM-dd")}&endPeriod={query.endDate.ToString("yyyy-MM-dd")}&detail=dataonly&dimensionAtObservation=AllDimensions");
+            var response = await _client.GetAsync(urlString);
+            //D.PLN.EUR.SP00.A?startPeriod=2009-05-12&endPeriod=2009-05-12&detail=dataonly&dimensionAtObservation=AllDimensions
+            var responseContent = await response.Content.ReadAsStringAsync();
 
-            return new List<SingleCurrencyDTO> { };
+            return ResponseParser.ParseCSVToObjectList(responseContent); 
         }
 
 

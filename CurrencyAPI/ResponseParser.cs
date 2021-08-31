@@ -17,7 +17,7 @@ namespace CurrencyAPI
                 for (int i = 1; i < csvAsArray.Length-1; i++)
                 {
                     string[] splitedLine = csvAsArray[i].Split(",");
-                    returnList.Add(new SingleCurrencyDTO() { date = DateTime.Parse(splitedLine[7]), rate = splitedLine[8] });
+                    returnList.Add(new SingleCurrencyDTO() {Id = i-1, date = DateTime.Parse(splitedLine[6]), rate = splitedLine[7]});
                 }
 
                 return returnList;
