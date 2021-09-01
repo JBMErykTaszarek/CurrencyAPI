@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CurrencyAPI.Models;
 
 namespace CurrencyAPI.DataBase
 {
@@ -15,5 +16,7 @@ namespace CurrencyAPI.DataBase
         }
 
         public DbSet<SingleCurrencyDTO> CurrencyRates {get; set;}
+
+        public DbSet<AuthorizationKey> AuthorizationKey { get; set; }
     }
 }

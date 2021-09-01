@@ -31,8 +31,21 @@ namespace CurrencyAPI.Controllers
         [Route("/GetCurrencyRates")]
         public async Task<ActionResult<IEnumerable<SingleCurrencyDTO>>> GetCurrencyRates([FromBody]CurrencyQuery query)
         {
-            return await _currencyService.GetCurrency(query);
+            try
+            {
+                return await _currencyService.GetCurrency(query);
+            }
+            catch (Exception ex)
+            {
+
+                return new NotFoundResult();
+            }
+            
         }
+
+        
+
+
 
 
         // GET: api/Currency/5

@@ -37,7 +37,8 @@ namespace CurrencyAPI
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(ConnectionString));
 
             services.AddSwaggerGen();
-            services.AddSingleton<ICurrencyService, CurrencyService>();
+            services.AddScoped<ICurrencyService, CurrencyService>();
+            services.AddScoped<IAuthorizationService, AuthorizationService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

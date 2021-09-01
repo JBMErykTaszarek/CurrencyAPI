@@ -200,7 +200,7 @@ csx/
 # Microsoft Azure Emulator
 ecf/
 rcf/
-
+./Migrations
 # Windows Store app package directories and files
 AppPackages/
 BundleArtifacts/
