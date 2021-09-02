@@ -11,6 +11,8 @@ using CurrencyAPI;
 using System.Globalization;
 using CurrencyAPI.DataBase;
 using CurrencyAPI.Helpers;
+using Newtonsoft.Json;
+using Microsoft.EntityFrameworkCore;
 
 namespace CurrencyAPI.Services
 {
@@ -33,7 +35,29 @@ namespace CurrencyAPI.Services
             {
                 if (_context.CurrencyRates.Any(c => c.date == query.startDate) && _context.CurrencyRates.Any(c => c.date == query.endDate))
                 {
-                    return (List<SingleCurrencyDTO>)_context.CurrencyRates.ToList().Where(cr => cr.date >= query.startDate && cr.date <= query.endDate).OrderBy(cr => cr.date);
+                    var date = query.startDate;
+                    var daysLenght = 1;
+                    for (int i = 0; i < (query.endDate - query.startDate).TotalDays; i++)
+                    {
+                        if (date.DayOfWeek.ToString() != DayOfWeek.Saturday.ToString() && date.DayOfWeek.ToString() != DayOfWeek.Sunday.ToString())
+                        {
+                            daysLenght++;
+                        }
+                        date = date.AddDays(1);
+                    }
+
+                    if (daysLenght == _context.CurrencyRates.Where(cr => cr.date >= query.startDate && cr.date <= query.endDate).Count())
+                    {
+                        List<SingleCurrencyDTO> fromCache = new List<SingleCurrencyDTO>();
+                        var ratesFromCache = _context.CurrencyRates.ToList().Where(cr => cr.date >= query.startDate && cr.date <= query.endDate).OrderBy(cr => cr.date);
+                        foreach (var item in ratesFromCache)
+                        {
+                            fromCache.Add(item);
+                        }
+                        
+                        return fromCache;
+                    }
+
 
                 }
 
@@ -62,9 +86,16 @@ namespace CurrencyAPI.Services
                     response = await _client.GetAsync(GetURLString(query));
                     responseContent = await response.Content.ReadAsStringAsync();
                 }
+                var parsedResponse = ResponseParser.ParseCSVToObjectList(responseContent);
+                var exceptList = parsedResponse.Except(_context.CurrencyRates.AsNoTracking().ToList());
+                foreach (var item in exceptList)
+                {
+                    _context.CurrencyRates.Add(new SingleCurrencyDTO() {date = item.date, rate = item.rate });
+                }
+                _context.SaveChanges();
 
-
-                return ResponseParser.ParseCSVToObjectList(responseContent);
+                return parsedResponse;
+                
             }
             else
             {
