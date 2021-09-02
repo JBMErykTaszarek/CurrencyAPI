@@ -1,4 +1,5 @@
 ﻿using CurrencyAPI.DataBase;
+using CurrencyAPI.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,6 +21,7 @@ namespace CurrencyAPI.Services.Interfaces
 
         public async Task<string> GetKey()
         {
+            
             var key = new byte[32];
             using (var generator = RandomNumberGenerator.Create())
                 generator.GetBytes(key);
@@ -27,6 +29,7 @@ namespace CurrencyAPI.Services.Interfaces
             _context.AuthorizationKey.Add(new Models.AuthorizationKey() { Hash = apiKey });
             await _context.SaveChangesAsync();
 
+            Logger.LogAction("Action GetKey was successfully called");
             return apiKey;
         }
     }

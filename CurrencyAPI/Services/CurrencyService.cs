@@ -13,6 +13,7 @@ using CurrencyAPI.DataBase;
 using CurrencyAPI.Helpers;
 using Newtonsoft.Json;
 using Microsoft.EntityFrameworkCore;
+using CurrencyAPI.Logging;
 
 namespace CurrencyAPI.Services
 {
@@ -54,7 +55,8 @@ namespace CurrencyAPI.Services
                         {
                             fromCache.Add(item);
                         }
-                        
+
+                        Logger.LogAction("Action GetCurrency was successfully called and gets data from cache");
                         return fromCache;
                     }
 
@@ -73,6 +75,8 @@ namespace CurrencyAPI.Services
                     throw new Exception("Bad api key");
                 }
 
+                
+
                 _client.DefaultRequestHeaders.Accept.Clear();
                 _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("text/csv"));
 
@@ -87,18 +91,24 @@ namespace CurrencyAPI.Services
                     responseContent = await response.Content.ReadAsStringAsync();
                 }
                 var parsedResponse = ResponseParser.ParseCSVToObjectList(responseContent);
-                var exceptList = parsedResponse.Except(_context.CurrencyRates.AsNoTracking().ToList());
-                foreach (var item in exceptList)
+                var currentRates = _context.CurrencyRates.AsNoTracking();
+                foreach (var item in parsedResponse)
                 {
-                    _context.CurrencyRates.Add(new SingleCurrencyDTO() {date = item.date, rate = item.rate });
+                    if (!(currentRates.Any(c => c.date == item.date)))
+                    {
+                        _context.CurrencyRates.Add(new SingleCurrencyDTO() { date = item.date, rate = item.rate });
+                    }
                 }
+               
                 _context.SaveChanges();
 
+                Logger.LogAction("Action GetCurrency was successfully called and gets data from ECB API");
                 return parsedResponse;
                 
             }
             else
             {
+                Logger.LogAction($"Action GetCurrency throwed error. Reason: {validarotResault.ToString()}");
                 throw new Exception("to to");
             }
             
