@@ -1,0 +1,140 @@
+09.09.2021 18:24:33--Action GetKey was successfully called
+09.09.2021 18:24:33--Action GetCurrency was successfully called and gets data from ECB API
+09.09.2021 18:42:56--Action GetCurrency throwed error. Reason: Bad date order. Please check if start date is earlier or equal to end date
+09.09.2021 18:43:53--Action GetCurrency throwed error. Reason: Bad date order. Please check if start date is earlier or equal to end date
+09.09.2021 18:43:53--Action GetKey was successfully called
+09.09.2021 18:45:10--Action GetCurrency throwed error. Reason: Bad date order. Please check if start date is earlier or equal to end date
+09.09.2021 18:45:11--Action GetKey was successfully called
+09.09.2021 18:45:26--Action GetCurrency throwed error. Reason: Bad date order. Please check if start date is earlier or equal to end date
+09.09.2021 18:45:27--Action GetKey was successfully called
+09.09.2021 18:45:52--Action GetCurrency throwed error. Reason: Bad date order. Please check if start date is earlier or equal to end date
+09.09.2021 18:45:53--Action GetKey was successfully called
+09.09.2021 18:46:24--Action GetCurrency throwed error. Reason: Bad date order. Please check if start date is earlier or equal to end date
+09.09.2021 18:46:25--Action GetKey was successfully called
+09.09.2021 18:47:02--Action GetCurrency throwed error. Reason: Bad date order. Please check if start date is earlier or equal to end date
+09.09.2021 18:47:02--Action GetKey was successfully called
+09.09.2021 18:47:43--Action GetCurrency throwed error. Reason: Bad date order. Please check if start date is earlier or equal to end date
+09.09.2021 18:47:44--Action GetKey was successfully called
+09.09.2021 18:48:34--Action GetCurrency was successfully called and gets data from ECB API
+09.09.2021 18:49:04--Action GetCurrency throwed error. Reason: Bad date order. Please check if start date is earlier or equal to end date
+09.09.2021 18:49:04--Action GetKey was successfully called
+09.09.2021 18:50:49--Action GetCurrency throwed error. Reason: Bad date order. Please check if start date is earlier or equal to end date
+09.09.2021 18:50:49--Action GetKey was successfully called
+09.09.2021 18:51:33--Action GetCurrency throwed error. Reason: Bad date order. Please check if start date is earlier or equal to end date
+09.09.2021 18:51:34--Action GetKey was successfully called
+09.09.2021 18:52:00--Action GetCurrency throwed error. Reason: Bad date order. Please check if start date is earlier or equal to end date
+09.09.2021 18:52:01--Action GetKey was successfully called
+09.09.2021 19:05:00--Action GetCurrency throwed error. Reason: Bad date order. Please check if start date is earlier or equal to end date
+09.09.2021 19:05:01--Action GetKey was successfully called
+09.09.2021 19:06:49--Action GetCurrency throwed error. Reason: Bad date order. Please check if start date is earlier or equal to end date
+09.09.2021 19:06:50--Action GetKey was successfully called
+09.09.2021 19:07:16--Action GetCurrency throwed error. Reason: Bad date order. Please check if start date is earlier or equal to end date
+09.09.2021 19:07:16--Action GetKey was successfully called
+09.09.2021 19:15:09--Action GetCurrency throwed error. Reason: Bad date order. Please check if start date is earlier or equal to end date
+09.09.2021 19:15:09--Action GetKey was successfully called
+09.09.2021 19:16:33--Action GetCurrency throwed error. Reason: Bad date order. Please check if start date is earlier or equal to end date
+09.09.2021 19:16:34--Action GetKey was successfully called
+09.09.2021 19:18:08--Action GetKey was successfully called
+09.09.2021 19:18:08--Action GetCurrency was successfully called and gets data from ECB API
+09.09.2021 19:18:45--Action GetCurrency was successfully called and gets data from ECB API
+09.09.2021 19:19:09--Action GetCurrency was successfully called and gets data from ECB API
+09.09.2021 19:19:46--Action GetKey was successfully called
+09.09.2021 19:19:46--Action GetCurrency was successfully called and gets data from cache
+09.09.2021 19:22:31--Action GetCurrency throwed error. Reason: Bad currency codes. Please type 3 charcters codes.)
+09.09.2021 19:22:31--Action GetKey was successfully called
+09.09.2021 19:23:52--Action GetCurrency throwed error. Reason: Bad currency codes. Please type 3 charcters codes.)
+09.09.2021 19:23:52--Action GetKey was successfully called
+09.09.2021 19:24:50--Action GetCurrency was successfully called and gets data from cache
+09.09.2021 19:24:50--Action GetKey was successfully called
+09.09.2021 19:26:40--Action GetCurrency throwed error. Reason: Bad currency codes. Please type 3 charcters codes.)
+09.09.2021 19:26:40--Action GetKey was successfully called
+09.09.2021 19:28:00--Action GetCurrency was successfully called and gets data from cache
+09.09.2021 19:28:00--Action GetKey was successfully called
+09.09.2021 19:30:32--Action GetCurrency was successfully called and gets data from cache
+09.09.2021 19:30:32--Action GetKey was successfully called
+09.09.2021 19:30:53--Action GetCurrency was successfully called and gets data from cache
+09.09.2021 19:30:54--Action GetKey was successfully called
+09.09.2021 19:35:45--Action GetKey was successfully called
+09.09.2021 19:35:46--Action GetCurrency was successfully called and gets data from ECB API
+09.09.2021 19:37:58--Action GetCurrency was successfully called and gets data from cache
+09.09.2021 19:37:58--Action GetKey was successfully called
+09.09.2021 19:37:59--Action GetCurrency was successfully called and gets data from ECB API
+09.09.2021 19:38:09--Action GetCurrency was successfully called and gets data from cache
+09.09.2021 19:38:09--Action GetKey was successfully called
+09.09.2021 19:38:09--Action GetCurrency was successfully called and gets data from ECB API
+09.09.2021 19:43:11--Action GetCurrency was successfully called and gets data from cache
+09.09.2021 19:43:11--Action GetKey was successfully called
+09.09.2021 19:43:11--Action GetCurrency was successfully called and gets data from ECB API
+09.09.2021 19:43:11--Action GetCurrency throwed error. Reason: Bad end date. Please check if end date does not contain date from the future
+09.09.2021 19:45:10--Action GetKey was successfully called
+09.09.2021 19:45:10--Action GetCurrency was successfully called and gets data from cache
+09.09.2021 19:45:10--Action GetCurrency throwed error. Reason: Bad date order. Please check if start date is earlier or equal to end date
+09.09.2021 19:45:11--Action GetCurrency was successfully called and gets data from ECB API
+09.09.2021 19:45:11--Action GetCurrency throwed error. Reason: Bad end date. Please check if end date does not contain date from the future
+09.09.2021 20:58:19--Action GetKey was successfully called
+09.09.2021 20:58:19--Action GetCurrency was successfully called and gets data from cache
+09.09.2021 20:58:19--Action GetCurrency throwed error. Reason: Bad date order. Please check if start date is earlier or equal to end date
+09.09.2021 20:58:20--Action GetCurrency was successfully called and gets data from ECB API
+09.09.2021 20:58:20--Action GetCurrency throwed error. Reason: Bad end date. Please check if end date does not contain date from the future
+09.09.2021 20:58:20--Action GetCurrency was successfully called and gets data from cache
+09.09.2021 20:58:48--Action GetKey was successfully called
+09.09.2021 20:58:48--Action GetCurrency was successfully called and gets data from cache
+09.09.2021 20:58:48--Action GetCurrency throwed error. Reason: Bad date order. Please check if start date is earlier or equal to end date
+09.09.2021 20:58:48--Action GetCurrency was successfully called and gets data from ECB API
+09.09.2021 20:58:48--Action GetCurrency throwed error. Reason: Bad end date. Please check if end date does not contain date from the future
+09.09.2021 20:58:48--Action GetCurrency was successfully called and gets data from cache
+09.09.2021 20:59:14--Action GetKey was successfully called
+09.09.2021 20:59:14--Action GetCurrency was successfully called and gets data from cache
+09.09.2021 20:59:14--Action GetCurrency throwed error. Reason: Bad date order. Please check if start date is earlier or equal to end date
+09.09.2021 20:59:15--Action GetCurrency was successfully called and gets data from ECB API
+09.09.2021 20:59:15--Action GetCurrency throwed error. Reason: Bad end date. Please check if end date does not contain date from the future
+09.09.2021 20:59:15--Action GetCurrency was successfully called and gets data from ECB API
+09.09.2021 21:23:16--Action GetKey was successfully called
+09.09.2021 21:23:16--Action GetCurrency was successfully called and gets data from cache
+09.09.2021 21:23:16--Action GetCurrency throwed error. Reason: Bad date order. Please check if start date is earlier or equal to end date
+09.09.2021 21:23:17--Action GetCurrency was successfully called and gets data from ECB API
+09.09.2021 21:23:17--Action GetCurrency throwed error. Reason: Bad end date. Please check if end date does not contain date from the future
+09.09.2021 21:23:17--Action GetCurrency was successfully called and gets data from ECB API
+09.09.2021 21:24:10--Action GetCurrency was successfully called and gets data from cache
+09.09.2021 21:24:32--Action GetCurrency was successfully called and gets data from cache
+09.09.2021 21:25:20--Action GetKey was successfully called
+09.09.2021 21:25:20--Action GetCurrency was successfully called and gets data from cache
+09.09.2021 21:25:36--Action GetCurrency throwed error. Reason: Bad date order. Please check if start date is earlier or equal to end date
+09.09.2021 21:25:37--Action GetCurrency was successfully called and gets data from ECB API
+09.09.2021 21:25:40--Action GetCurrency throwed error. Reason: Bad end date. Please check if end date does not contain date from the future
+09.09.2021 21:25:41--Action GetCurrency was successfully called and gets data from ECB API
+09.09.2021 21:27:35--Action GetKey was successfully called
+09.09.2021 21:27:35--Action GetCurrency was successfully called and gets data from cache
+09.09.2021 21:27:35--Action GetCurrency throwed error. Reason: Bad date order. Please check if start date is earlier or equal to end date
+09.09.2021 21:27:36--Action GetCurrency was successfully called and gets data from ECB API
+09.09.2021 21:27:36--Action GetCurrency throwed error. Reason: Bad end date. Please check if end date does not contain date from the future
+09.09.2021 21:27:37--Action GetCurrency was successfully called and gets data from ECB API
+09.09.2021 21:29:57--Action GetKey was successfully called
+09.09.2021 21:29:57--Action GetCurrency was successfully called and gets data from cache
+09.09.2021 21:29:57--Action GetCurrency throwed error. Reason: Bad date order. Please check if start date is earlier or equal to end date
+09.09.2021 21:29:58--Action GetCurrency was successfully called and gets data from ECB API
+09.09.2021 21:29:58--Action GetCurrency throwed error. Reason: Bad end date. Please check if end date does not contain date from the future
+09.09.2021 21:30:25--Action GetCurrency was successfully called and gets data from cache
+09.09.2021 21:30:25--Action GetKey was successfully called
+09.09.2021 21:30:25--Action GetCurrency throwed error. Reason: Bad date order. Please check if start date is earlier or equal to end date
+09.09.2021 21:30:25--Action GetCurrency was successfully called and gets data from ECB API
+09.09.2021 21:30:25--Action GetCurrency throwed error. Reason: Bad end date. Please check if end date does not contain date from the future
+09.09.2021 21:30:26--Action GetCurrency was successfully called and gets data from ECB API
+09.09.2021 21:31:12--Action GetCurrency was successfully called and gets data from cache
+09.09.2021 21:31:30--Action GetCurrency was successfully called and gets data from cache
+09.09.2021 21:33:16--Action GetCurrency was successfully called and gets data from cache
+09.09.2021 21:33:16--Action GetKey was successfully called
+09.09.2021 21:33:16--Action GetCurrency throwed error. Reason: Bad date order. Please check if start date is earlier or equal to end date
+09.09.2021 21:33:16--Action GetCurrency was successfully called and gets data from ECB API
+09.09.2021 21:33:16--Action GetCurrency throwed error. Reason: Bad end date. Please check if end date does not contain date from the future
+09.09.2021 21:33:17--Action GetCurrency was successfully called and gets data from ECB API
+09.09.2021 21:33:51--Action GetCurrency was successfully called and gets data from ECB API
+09.09.2021 21:39:03--Action GetCurrency was successfully called and gets data from ECB API
+09.09.2021 21:39:31--Action GetCurrency was successfully called and gets data from ECB API
+09.09.2021 21:39:47--Action GetKey was successfully called
+09.09.2021 21:39:47--Action GetCurrency was successfully called and gets data from cache
+09.09.2021 21:39:47--Action GetCurrency throwed error. Reason: Bad date order. Please check if start date is earlier or equal to end date
+09.09.2021 21:39:47--Action GetCurrency was successfully called and gets data from ECB API
+09.09.2021 21:39:48--Action GetCurrency was successfully called and gets data from ECB API
+09.09.2021 21:39:48--Action GetCurrency throwed error. Reason: Bad end date. Please check if end date does not contain date from the future
+09.09.2021 21:39:48--Action GetCurrency was successfully called and gets data from ECB API
